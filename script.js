@@ -70,7 +70,7 @@ function submitForm() {
     const suggestions = careerSuggestions[topCategory] || 'No suggestions available for this choice';
 
     document.getElementById('results').style.display = 'block';
-    document.getElementById('suggestions').innerHTML = `${suggestions}`;
+    document.getElementById('suggestions').innerHTML = `Your top careers suggestion are: ${suggestions}`;
 
     // Show the email form
     document.getElementById('emailForm').style.display = 'block';
