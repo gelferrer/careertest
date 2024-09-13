@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        #careerForm {
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e9ecef;
+        }
+        #emailForm {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .email-input {
+            margin-bottom: 15px;
+        }
+        .email-input label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .email-input input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .email-input input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .email-input input[type="text"],
+        .email-input input[type="email"] {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Career Test</h1>
+        <form id="careerForm">
+            <!-- Questions will be inserted here -->
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <div id="results">
+            <div id="suggestions"></div>
+            <div id="emailForm">
+                <h3>Would you like to receive the results via email?</h3>
+                <div class="email-input">
+                    <input type="checkbox" id="receiveEmail" name="receiveEmail">
+                    <label for="receiveEmail">Yes, send me the results</label>
+                </div>
+                <div class="email-input">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="email-input">
+                    <label for="userEmail">Your Email:</label>
+                    <input type="email" id="userEmail" name="userEmail">
+                </div>
+                <button type="button" onclick="sendEmail()">Send to Email</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
